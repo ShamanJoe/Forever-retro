@@ -1,0 +1,7 @@
+{
+  "name": "Baal_2022_forelesning_1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
