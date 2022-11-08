@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TDS200 h22 1022 eksamen</string>
+    <string name="title_activity_main">TDS200 h22 1022 eksamen</string>
+    <string name="package_name">com.android.library</string>
+    <string name="custom_url_scheme">com.android.library</string>
+</resources>
