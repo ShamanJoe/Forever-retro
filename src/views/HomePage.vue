@@ -121,7 +121,7 @@ ion-content {
             id="button-fix"
             class="nes-btn is-success"
             color="dark"
-            router-link="/new-spot"
+            router-link="/newListing"
             >+</ion-button
           >
         </ion-buttons>
