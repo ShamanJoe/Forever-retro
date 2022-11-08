@@ -123,7 +123,7 @@ ion-card {
         </ion-card-content>
         <ion-card-content>
           {{ listings.price + ",-" }}
-          {{ listings.first_name + ",-" }}
+          {{ listings.first_name }}
         </ion-card-content>
       </ion-card>
     </ion-content>

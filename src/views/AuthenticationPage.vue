@@ -17,16 +17,17 @@ import "@fontsource/press-start-2p";
 
 const router = useRouter();
 
-/* State */
-// The user can toggle between login and register mode in the form to show/hide additional fields
+//En toggle mellom regstrer og login så man kan se feltene som trengs
 const inRegisterMode = ref(false);
 
-// Provides two-way data binding between Vue and the input fields in the form
+//Toveis data binding mellom Vue og inputfeltene i "form"
 const userDetails = ref({
   firstName: "",
   email: "",
   password: "",
 });
+
+//Autentisering på email and password fields for å logge inn
 
 const login = async () => {
   try {
@@ -39,9 +40,12 @@ const login = async () => {
     console.error(error);
   }
 };
+//Når du trykker på fortsett som gjest blir man redirected til hjemmesiden
 const guestSignIn = () => {
   router.replace("/home");
 };
+
+//Registrere nye brukere
 const register = async () => {
   try {
     await authService.register(

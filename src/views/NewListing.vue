@@ -11,7 +11,6 @@ import {
   IonIcon,
   IonInput,
   IonItem,
-  IonLabel,
   IonList,
   IonPage,
   IonSpinner,
@@ -23,11 +22,11 @@ import {
 import { add, trashOutline } from "ionicons/icons";
 import { ref } from "vue";
 
-// Keeps track of the input field for new hashtags
+//Passer på inputfeltene for nye plattformer
 const newPlatform = ref("");
 const isUploadingListing = ref(false);
 
-// Keeps track of all data input from the user towards adding a new camp spot
+//Holder dataen fra input feltene brukeren legger inn i ny annonse
 const newListing = ref({
   title: "",
   image: "",
@@ -36,16 +35,16 @@ const newListing = ref({
   price: "",
 });
 
-// Add whatever is in the hashtag input field to the camp spot's array of hashtags
+//Legg til platform feltene i et array i annonsen
 const addPlatform = () => {
-  // Avoid adding empty hashtags
+  // unngå tomme plattform felter
   if (newPlatform.value) {
-    newListing.value.platform.push(newPlatform.value); // LES: Det er ikke farlig hvis du får røde squiggly lines her, det skal vi senere fikse med TypeScript
+    newListing.value.platform.push(newPlatform.value);
     newPlatform.value = "";
   }
 };
 
-// Handle data POSTing
+// Håndtere data POSTing
 const postnewListing = async () => {
   if (!newListing.value.image) {
     alert("Du må laste opp bilde");
@@ -95,7 +94,7 @@ const postnewListing = async () => {
   }
 };
 
-// Open the device's camera and/or file picker UI
+//Åpne kamera på valgt maskin eller galleri
 const triggerCamera = async () => {
   const photo = await Camera.getPhoto({
     quality: 10,
@@ -110,7 +109,7 @@ const triggerCamera = async () => {
   }
 };
 
-// Handle (preview) image removal
+//fjerne valgt bilde
 const removeImagePreview = () => {
   newListing.value.image = "";
 };
@@ -133,7 +132,6 @@ const removeImagePreview = () => {
 
     <ion-content :fullscreen="true">
       <ion-list>
-        <!-- Logic for file picking / using camera will be added later -->
         <ion-button
           @click="triggerCamera"
           class="nes-btn is-primary"

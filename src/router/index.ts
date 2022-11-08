@@ -55,8 +55,8 @@ const routes: Array<RouteRecordRaw> = [
     beforeEnter: [authenticationREquredRouteGuard],
   },
   {
-    path: "/new-spot",
-    name: "NewCampSpot",
+    path: "/newListing",
+    name: "NewListing",
     component: NewListing,
     beforeEnter: [authenticationREquredRouteGuard],
   },

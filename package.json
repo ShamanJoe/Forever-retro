@@ -1,5 +1,5 @@
 {
-  "name": "Baal_2022",
+  "name": "TDS200_h22_1022",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -52,5 +52,5 @@
     "ts-jest": "^27.0.7",
     "typescript": "^4.3.5"
   },
-  "description": "An Ionic project"
+  "description": "Crossplatform exam"
 }

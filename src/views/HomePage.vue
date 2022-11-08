@@ -156,6 +156,7 @@ ion-content {
 
         <ion-card-content class="nes-container is-dark is-centered">
           {{ listing.description }}
+          {{ listings.first_name }}
         </ion-card-content>
       </ion-card>
     </ion-content>

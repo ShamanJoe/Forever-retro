@@ -1,47 +1,22 @@
 <script setup lang="ts">
 import {
-  IonModal,
   onIonViewDidEnter,
-  IonTextarea,
   IonBackButton,
-  IonButton,
-  IonAvatar,
-  IonText,
-  IonIcon,
-  IonItem,
-  IonListHeader,
-  IonLabel,
-  IonList,
-  IonCardHeader,
-  IonCardSubtitle,
   IonButtons,
   IonCard,
   IonCardContent,
-  IonChip,
   IonContent,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
-  IonSpinner,
 } from "@ionic/vue";
 import { ref } from "vue";
-import { chatboxOutline } from "ionicons/icons";
 import { useRoute } from "vue-router";
 import { directus } from "@/services/directus.service";
 
-/* Using the route object, we can get data for the user's current route */
-const route = useRoute();
-
-/* Retrieve the id parameter from the current route's query string (/detail/:id) */
-const { id } = route.params;
-const userAccessToken = localStorage.getItem("auth_token");
-
-/* "Dummy data" for displaying in the UI until we connect the app to an API */
+//"Dummy data" for displaying in the UI until we connect the app to an API
 const listings = ref(null);
-
-/* State */
-const isLoadingListings = ref(true);
 
 onIonViewDidEnter(() => {
   fetchListing();
